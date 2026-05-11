@@ -1,0 +1,71 @@
+aid: exact-online
+name: Exact Online
+description: >-
+  Exact Online is a Dutch cloud business software suite from Exact (Delft, NL)
+  serving SMEs and accountants with accounting, ERP, invoicing, CRM, project
+  management, and AI-driven automation, used by more than 675,000 companies.
+  The platform exposes a comprehensive REST and OData API covering financial,
+  HRM, logistics, CRM, and project data across regional deployments
+  (start.exactonline.nl, .co.uk, .be, .de, .fr, .es, .com). Authentication is
+  via OAuth 2.0 with regional authorization and token endpoints.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Accounting
+  - ERP
+  - Invoicing
+  - Business Software
+  - CRM
+  - Financial Software
+  - SME
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/exact-online/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: exact-online:rest-api
+    name: Exact Online REST / OData API
+    description: >-
+      REST and OData API (v1) for Exact Online covering financials, sales,
+      purchasing, inventory, HRM, CRM, project management, and master data.
+      Authentication is OAuth 2.0; applications register in the Exact App
+      Center and use regional auth/token endpoints (e.g. start.exactonline.nl
+      for the Netherlands, start.exactonline.co.uk for the UK).
+    humanURL: https://start.exactonline.nl/docs/HlpRestAPIResources.aspx
+    baseURL: https://start.exactonline.nl/api/v1
+    tags:
+      - Accounting
+      - ERP
+      - Invoicing
+      - Financial
+    properties:
+      - type: Documentation
+        url: https://start.exactonline.nl/docs/HlpRestAPIResources.aspx
+      - type: Reference
+        url: https://support.exactonline.com/community/s/article/All-All-DNO-Content-restrefdocs
+      - type: Introduction
+        url: https://support.exactonline.com/community/s/article/All-All-DNO-Content-restintro
+      - type: OAuth Authorization Endpoint
+        url: https://start.exactonline.nl/api/oauth2/auth
+      - type: OAuth Token Endpoint
+        url: https://start.exactonline.nl/api/oauth2/token
+      - type: Sample Code
+        url: https://support.exactonline.com/community/s/article/All-All-DNO-Content-restsamplecode
+
+common:
+  - type: Website
+    url: https://www.exact.com
+  - type: Documentation
+    url: https://support.exactonline.com/community/s/knowledge-base
+  - type: API Documentation
+    url: https://start.exactonline.nl/docs/HlpRestAPIResources.aspx
+  - type: Pricing
+    url: https://www.exact.com/nl/software/prijs
+  - type: Sign Up
+    url: https://www.exact.com/nl/probeer-gratis
+  - type: App Center
+    url: https://apps.exactonline.com
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
