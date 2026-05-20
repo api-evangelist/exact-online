@@ -54,6 +54,8 @@ apis:
         url: https://support.exactonline.com/community/s/article/All-All-DNO-Content-restsamplecode
 
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/exact
   - type: Website
     url: https://www.exact.com
   - type: Documentation
