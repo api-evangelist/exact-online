@@ -1,0 +1,636 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Exact Online REST / OData API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://start.exactonline.nl/api/oauth2/auth",
+      "accessTokenUrl": "https://start.exactonline.nl/api/oauth2/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "System",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get current user and division",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://start.exactonline.nl/api/v1/current/Me"
+          },
+          "docs": "Get current user and division"
+        },
+        {
+          "info": {
+            "name": "List divisions accessible to current user",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://start.exactonline.nl/api/v1/:division/system/Divisions",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List divisions accessible to current user"
+        },
+        {
+          "info": {
+            "name": "List all licensed divisions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://start.exactonline.nl/api/v1/:division/system/AllDivisions",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List all licensed divisions"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "CRM",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List CRM accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://start.exactonline.nl/api/v1/:division/crm/Accounts",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "$select",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "$filter",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List CRM accounts"
+        },
+        {
+          "info": {
+            "name": "Create CRM account",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://start.exactonline.nl/api/v1/:division/crm/Accounts",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create CRM account"
+        },
+        {
+          "info": {
+            "name": "Get CRM account",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://start.exactonline.nl/api/v1/:division/crm/Accounts(:id)",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get CRM account"
+        },
+        {
+          "info": {
+            "name": "Update CRM account",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://start.exactonline.nl/api/v1/:division/crm/Accounts(:id)",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update CRM account"
+        },
+        {
+          "info": {
+            "name": "Delete CRM account",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://start.exactonline.nl/api/v1/:division/crm/Accounts(:id)",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete CRM account"
+        },
+        {
+          "info": {
+            "name": "List contacts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://start.exactonline.nl/api/v1/:division/crm/Contacts",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List contacts"
+        },
+        {
+          "info": {
+            "name": "Create contact",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://start.exactonline.nl/api/v1/:division/crm/Contacts",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create contact"
+        },
+        {
+          "info": {
+            "name": "Get contact",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://start.exactonline.nl/api/v1/:division/crm/Contacts(:id)",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get contact"
+        },
+        {
+          "info": {
+            "name": "Update contact",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://start.exactonline.nl/api/v1/:division/crm/Contacts(:id)",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update contact"
+        },
+        {
+          "info": {
+            "name": "Delete contact",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://start.exactonline.nl/api/v1/:division/crm/Contacts(:id)",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete contact"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Sales",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List sales invoices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://start.exactonline.nl/api/v1/:division/salesinvoice/SalesInvoices",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List sales invoices"
+        },
+        {
+          "info": {
+            "name": "Create sales invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://start.exactonline.nl/api/v1/:division/salesinvoice/SalesInvoices",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create sales invoice"
+        },
+        {
+          "info": {
+            "name": "Get sales invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://start.exactonline.nl/api/v1/:division/salesinvoice/SalesInvoices(:id)",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get sales invoice"
+        },
+        {
+          "info": {
+            "name": "Update sales invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://start.exactonline.nl/api/v1/:division/salesinvoice/SalesInvoices(:id)",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update sales invoice"
+        },
+        {
+          "info": {
+            "name": "Delete sales invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://start.exactonline.nl/api/v1/:division/salesinvoice/SalesInvoices(:id)",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete sales invoice"
+        },
+        {
+          "info": {
+            "name": "List sales orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://start.exactonline.nl/api/v1/:division/salesorder/SalesOrders",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List sales orders"
+        },
+        {
+          "info": {
+            "name": "Create sales order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://start.exactonline.nl/api/v1/:division/salesorder/SalesOrders",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create sales order"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Purchase",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List purchase orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://start.exactonline.nl/api/v1/:division/purchaseorder/PurchaseOrders",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List purchase orders"
+        },
+        {
+          "info": {
+            "name": "Create purchase order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://start.exactonline.nl/api/v1/:division/purchaseorder/PurchaseOrders",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create purchase order"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Financial",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List general-ledger accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://start.exactonline.nl/api/v1/:division/financial/GLAccounts",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List general-ledger accounts"
+        },
+        {
+          "info": {
+            "name": "Create GL account",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://start.exactonline.nl/api/v1/:division/financial/GLAccounts",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create GL account"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Logistics",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://start.exactonline.nl/api/v1/:division/logistics/Items",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List items"
+        },
+        {
+          "info": {
+            "name": "Create item",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://start.exactonline.nl/api/v1/:division/logistics/Items",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create item"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
