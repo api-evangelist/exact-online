@@ -9,7 +9,7 @@ description: >-
   (start.exactonline.nl, .co.uk, .be, .de, .fr, .es, .com). Authentication is
   via OAuth 2.0 with regional authorization and token endpoints.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Accounting
   - ERP
