@@ -64,7 +64,7 @@ common:
     url: https://start.exactonline.nl/docs/HlpRestAPIResources.aspx
   - type: Pricing
     url: https://www.exact.com/nl/software/prijs
-  - type: SignUp
+  - type: Signup
     url: https://www.exact.com/nl/probeer-gratis
   - type: App Center
     url: https://apps.exactonline.com
