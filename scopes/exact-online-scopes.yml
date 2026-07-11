@@ -1,0 +1,19 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/exact-online-openapi.yml
+docs: https://support.exactonline.com/community/s/article/All-All-DNO-Content-oauth-eol-oauth-devstep2?language=en_GB
+note: >-
+  Exact Online's OAuth 2.0 authorization code flow does not use a scope
+  parameter (documented request parameters are client_id, redirect_uri,
+  response_type, and force_login); access levels are instead configured per
+  resource (None/Read/Manage) in the Exact App Center Data & Security Review
+  and consented per division by the user
+  (https://support.exactonline.com/community/s/article/All-All-DNO-Content-oauth-eol-oauth-devstep2?language=en_GB).
+schemes:
+- name: oauth2
+  source: openapi/exact-online-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://start.exactonline.nl/api/oauth2/auth
+    tokenUrl: https://start.exactonline.nl/api/oauth2/token
+scopes: []

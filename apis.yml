@@ -54,6 +54,8 @@ apis:
         url: https://support.exactonline.com/community/s/article/All-All-DNO-Content-restsamplecode
 
 common:
+  - type: OAuthScopes
+    url: scopes/exact-online-scopes.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/exact
   - type: Website
@@ -68,6 +70,8 @@ common:
     url: https://www.exact.com/nl/probeer-gratis
   - type: App Center
     url: https://apps.exactonline.com
+  - type: Blog
+    url: https://www.exact.com/nl/blog?format=feed&type=rss
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
