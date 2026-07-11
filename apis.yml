@@ -54,6 +54,14 @@ apis:
         url: https://support.exactonline.com/community/s/article/All-All-DNO-Content-restsamplecode
 
 common:
+  - type: TrustCenter
+    url: security/exact-online-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/exact-online-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/exact-online-domain-security.yml
+  - type: Authentication
+    url: authentication/exact-online-authentication.yml
   - type: OAuthScopes
     url: scopes/exact-online-scopes.yml
   - type: LinkedIn

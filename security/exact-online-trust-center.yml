@@ -1,0 +1,13 @@
+generated: '2026-07-11'
+method: searched
+probe: true
+source: https://www.exact.com/trust
+url: https://www.exact.com/trust
+certifications:
+- GDPR
+evidence:
+- source: https://www.exact.com/trust
+  keywords:
+  - trust center
+  - compliance certification
+  - gdpr
