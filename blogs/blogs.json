@@ -1,0 +1,21 @@
+{
+  "repo": "exact-online",
+  "feeds": [
+    {
+      "source": "https://www.exact.com/nl/blog?format=feed&type=rss",
+      "feed_url": "https://www.exact.com/nl/blog?format=feed&type=rss",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://apps.exactonline.com",
+      "feed_url": "https://apps.exactonline.com",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 10
+}
