@@ -54,6 +54,8 @@ apis:
         url: https://support.exactonline.com/community/s/article/All-All-DNO-Content-restsamplecode
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/exact-online-agentic-access.yml
   - type: TrustCenter
     url: security/exact-online-trust-center.yml
   - type: VulnerabilityDisclosure
