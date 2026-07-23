@@ -1,0 +1,161 @@
+openapi: 3.1.0
+info:
+  title: Exact Online REST / OData CRM Sales API
+  description: Partial OpenAPI for the Exact Online REST/OData API (v1). Endpoints are drawn from the official documentation at https://start.exactonline.nl/docs/HlpRestAPIResources.aspx covering CRM, Sales, Purchase, Financial, Logistics, and System resources. The full API exposes hundreds of OData entity sets; this spec covers the most commonly used entities. Authentication is OAuth 2.0 with regional auth endpoints.
+  version: 1.0.0
+  contact:
+    name: API Evangelist
+    email: kin@apievangelist.com
+  license:
+    name: Proprietary
+servers:
+- url: https://start.exactonline.nl/api/v1
+  description: Netherlands
+- url: https://start.exactonline.co.uk/api/v1
+  description: United Kingdom
+- url: https://start.exactonline.be/api/v1
+  description: Belgium
+- url: https://start.exactonline.de/api/v1
+  description: Germany
+- url: https://start.exactonline.com/api/v1
+  description: International
+security:
+- oauth2: []
+tags:
+- name: Sales
+paths:
+  /{division}/salesinvoice/SalesInvoices:
+    parameters:
+    - name: division
+      in: path
+      required: true
+      schema:
+        type: integer
+    get:
+      summary: List sales invoices
+      operationId: listSalesInvoices
+      tags:
+      - Sales
+      responses:
+        '200':
+          description: Sales invoices
+    post:
+      summary: Create sales invoice
+      operationId: createSalesInvoice
+      tags:
+      - Sales
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SalesInvoice'
+      responses:
+        '201':
+          description: Created
+  /{division}/salesinvoice/SalesInvoices({id}):
+    parameters:
+    - name: division
+      in: path
+      required: true
+      schema:
+        type: integer
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      summary: Get sales invoice
+      operationId: getSalesInvoice
+      tags:
+      - Sales
+      responses:
+        '200':
+          description: Sales invoice
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SalesInvoice'
+    put:
+      summary: Update sales invoice
+      operationId: updateSalesInvoice
+      tags:
+      - Sales
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SalesInvoice'
+      responses:
+        '204':
+          description: Updated
+    delete:
+      summary: Delete sales invoice
+      operationId: deleteSalesInvoice
+      tags:
+      - Sales
+      responses:
+        '204':
+          description: Deleted
+  /{division}/salesorder/SalesOrders:
+    parameters:
+    - name: division
+      in: path
+      required: true
+      schema:
+        type: integer
+    get:
+      summary: List sales orders
+      operationId: listSalesOrders
+      tags:
+      - Sales
+      responses:
+        '200':
+          description: Sales orders
+    post:
+      summary: Create sales order
+      operationId: createSalesOrder
+      tags:
+      - Sales
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        '201':
+          description: Created
+components:
+  schemas:
+    SalesInvoice:
+      type: object
+      properties:
+        InvoiceID:
+          type: string
+          format: uuid
+        InvoiceNumber:
+          type: integer
+        InvoiceTo:
+          type: string
+          format: uuid
+        Description:
+          type: string
+        AmountDC:
+          type: number
+        Currency:
+          type: string
+        Status:
+          type: integer
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://start.exactonline.nl/api/oauth2/auth
+          tokenUrl: https://start.exactonline.nl/api/oauth2/token
+          scopes: {}

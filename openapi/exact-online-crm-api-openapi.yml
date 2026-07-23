@@ -1,0 +1,244 @@
+openapi: 3.1.0
+info:
+  title: Exact Online REST / OData CRM API
+  description: Partial OpenAPI for the Exact Online REST/OData API (v1). Endpoints are drawn from the official documentation at https://start.exactonline.nl/docs/HlpRestAPIResources.aspx covering CRM, Sales, Purchase, Financial, Logistics, and System resources. The full API exposes hundreds of OData entity sets; this spec covers the most commonly used entities. Authentication is OAuth 2.0 with regional auth endpoints.
+  version: 1.0.0
+  contact:
+    name: API Evangelist
+    email: kin@apievangelist.com
+  license:
+    name: Proprietary
+servers:
+- url: https://start.exactonline.nl/api/v1
+  description: Netherlands
+- url: https://start.exactonline.co.uk/api/v1
+  description: United Kingdom
+- url: https://start.exactonline.be/api/v1
+  description: Belgium
+- url: https://start.exactonline.de/api/v1
+  description: Germany
+- url: https://start.exactonline.com/api/v1
+  description: International
+security:
+- oauth2: []
+tags:
+- name: CRM
+paths:
+  /{division}/crm/Accounts:
+    parameters:
+    - name: division
+      in: path
+      required: true
+      schema:
+        type: integer
+    get:
+      summary: List CRM accounts
+      operationId: listAccounts
+      tags:
+      - CRM
+      parameters:
+      - name: $select
+        in: query
+        schema:
+          type: string
+      - name: $filter
+        in: query
+        schema:
+          type: string
+      - name: $top
+        in: query
+        schema:
+          type: integer
+      - name: $skip
+        in: query
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: List of accounts
+    post:
+      summary: Create CRM account
+      operationId: createAccount
+      tags:
+      - CRM
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Account'
+      responses:
+        '201':
+          description: Account created
+  /{division}/crm/Accounts({id}):
+    parameters:
+    - name: division
+      in: path
+      required: true
+      schema:
+        type: integer
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      summary: Get CRM account
+      operationId: getAccount
+      tags:
+      - CRM
+      responses:
+        '200':
+          description: Account
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Account'
+    put:
+      summary: Update CRM account
+      operationId: updateAccount
+      tags:
+      - CRM
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Account'
+      responses:
+        '204':
+          description: Updated
+    delete:
+      summary: Delete CRM account
+      operationId: deleteAccount
+      tags:
+      - CRM
+      responses:
+        '204':
+          description: Deleted
+  /{division}/crm/Contacts:
+    parameters:
+    - name: division
+      in: path
+      required: true
+      schema:
+        type: integer
+    get:
+      summary: List contacts
+      operationId: listContacts
+      tags:
+      - CRM
+      responses:
+        '200':
+          description: Contacts
+    post:
+      summary: Create contact
+      operationId: createContact
+      tags:
+      - CRM
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Contact'
+      responses:
+        '201':
+          description: Created
+  /{division}/crm/Contacts({id}):
+    parameters:
+    - name: division
+      in: path
+      required: true
+      schema:
+        type: integer
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    get:
+      summary: Get contact
+      operationId: getContact
+      tags:
+      - CRM
+      responses:
+        '200':
+          description: Contact
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Contact'
+    put:
+      summary: Update contact
+      operationId: updateContact
+      tags:
+      - CRM
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Contact'
+      responses:
+        '204':
+          description: Updated
+    delete:
+      summary: Delete contact
+      operationId: deleteContact
+      tags:
+      - CRM
+      responses:
+        '204':
+          description: Deleted
+components:
+  schemas:
+    Account:
+      type: object
+      properties:
+        ID:
+          type: string
+          format: uuid
+        Code:
+          type: string
+        Name:
+          type: string
+        Email:
+          type: string
+        Phone:
+          type: string
+        Status:
+          type: string
+        Type:
+          type: string
+          enum:
+          - C
+          - S
+          - R
+    Contact:
+      type: object
+      properties:
+        ID:
+          type: string
+          format: uuid
+        Account:
+          type: string
+          format: uuid
+        FirstName:
+          type: string
+        LastName:
+          type: string
+        Email:
+          type: string
+        Phone:
+          type: string
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://start.exactonline.nl/api/oauth2/auth
+          tokenUrl: https://start.exactonline.nl/api/oauth2/token
+          scopes: {}

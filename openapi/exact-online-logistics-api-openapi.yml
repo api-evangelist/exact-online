@@ -1,0 +1,65 @@
+openapi: 3.1.0
+info:
+  title: Exact Online REST / OData CRM Logistics API
+  description: Partial OpenAPI for the Exact Online REST/OData API (v1). Endpoints are drawn from the official documentation at https://start.exactonline.nl/docs/HlpRestAPIResources.aspx covering CRM, Sales, Purchase, Financial, Logistics, and System resources. The full API exposes hundreds of OData entity sets; this spec covers the most commonly used entities. Authentication is OAuth 2.0 with regional auth endpoints.
+  version: 1.0.0
+  contact:
+    name: API Evangelist
+    email: kin@apievangelist.com
+  license:
+    name: Proprietary
+servers:
+- url: https://start.exactonline.nl/api/v1
+  description: Netherlands
+- url: https://start.exactonline.co.uk/api/v1
+  description: United Kingdom
+- url: https://start.exactonline.be/api/v1
+  description: Belgium
+- url: https://start.exactonline.de/api/v1
+  description: Germany
+- url: https://start.exactonline.com/api/v1
+  description: International
+security:
+- oauth2: []
+tags:
+- name: Logistics
+paths:
+  /{division}/logistics/Items:
+    parameters:
+    - name: division
+      in: path
+      required: true
+      schema:
+        type: integer
+    get:
+      summary: List items
+      operationId: listItems
+      tags:
+      - Logistics
+      responses:
+        '200':
+          description: Items
+    post:
+      summary: Create item
+      operationId: createItem
+      tags:
+      - Logistics
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        '201':
+          description: Created
+components:
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://start.exactonline.nl/api/oauth2/auth
+          tokenUrl: https://start.exactonline.nl/api/oauth2/token
+          scopes: {}
