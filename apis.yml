@@ -9,7 +9,19 @@ description: >-
   (start.exactonline.nl, .co.uk, .be, .de, .fr, .es, .com). Authentication is
   via OAuth 2.0 with regional authorization and token endpoints.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/exact-online.png
 tags:
   - Accounting
   - ERP
@@ -24,35 +36,93 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: exact-online:rest-api
-    name: Exact Online REST / OData API
-    description: >-
-      REST and OData API (v1) for Exact Online covering financials, sales,
-      purchasing, inventory, HRM, CRM, project management, and master data.
-      Authentication is OAuth 2.0; applications register in the Exact App
-      Center and use regional auth/token endpoints (e.g. start.exactonline.nl
-      for the Netherlands, start.exactonline.co.uk for the UK).
-    humanURL: https://start.exactonline.nl/docs/HlpRestAPIResources.aspx
-    baseURL: https://start.exactonline.nl/api/v1
-    tags:
-      - Accounting
-      - ERP
-      - Invoicing
-      - Financial
-    properties:
-      - type: Documentation
-        url: https://start.exactonline.nl/docs/HlpRestAPIResources.aspx
-      - type: Reference
-        url: https://support.exactonline.com/community/s/article/All-All-DNO-Content-restrefdocs
-      - type: Introduction
-        url: https://support.exactonline.com/community/s/article/All-All-DNO-Content-restintro
-      - type: OAuth Authorization Endpoint
-        url: https://start.exactonline.nl/api/oauth2/auth
-      - type: OAuth Token Endpoint
-        url: https://start.exactonline.nl/api/oauth2/token
-      - type: Sample Code
-        url: https://support.exactonline.com/community/s/article/All-All-DNO-Content-restsamplecode
-
+- aid: exact-online:rest-api
+  name: Exact Online REST / OData API
+  description: >-
+    REST and OData API (v1) for Exact Online covering financials, sales, purchasing, inventory, HRM, CRM,
+    project management, and master data. Authentication is OAuth 2.0; applications register in the Exact
+    App Center and use regional auth/token endpoints (e.g. start.exactonline.nl for the Netherlands, start.exactonline.co.uk
+    for the UK).
+  humanURL: https://start.exactonline.nl/docs/HlpRestAPIResources.aspx
+  baseURL: https://start.exactonline.nl/api/v1
+  tags:
+  - Accounting
+  - ERP
+  - Invoicing
+  - Financial
+  properties:
+  - type: Documentation
+    url: https://start.exactonline.nl/docs/HlpRestAPIResources.aspx
+  - type: Reference
+    url: https://support.exactonline.com/community/s/article/All-All-DNO-Content-restrefdocs
+  - type: Introduction
+    url: https://support.exactonline.com/community/s/article/All-All-DNO-Content-restintro
+  - type: OAuth Authorization Endpoint
+    url: https://start.exactonline.nl/api/oauth2/auth
+  - type: OAuth Token Endpoint
+    url: https://start.exactonline.nl/api/oauth2/token
+  - type: Sample Code
+    url: https://support.exactonline.com/community/s/article/All-All-DNO-Content-restsamplecode
+- aid: exact-online:exact-online-crm-api
+  name: Exact Online CRM API
+  description: The CRM API from Exact Online — 4 operation(s) for crm.
+  humanURL: https://start.exactonline.nl/docs/HlpRestAPIResources.aspx
+  baseURL: https://start.exactonline.nl/api/v1
+  tags:
+  - CRM
+  properties:
+  - type: OpenAPI
+    url: openapi/exact-online-crm-api-openapi.yml
+- aid: exact-online:exact-online-financial-api
+  name: Exact Online Financial API
+  description: The Financial API from Exact Online — 1 operation(s) for financial.
+  humanURL: https://start.exactonline.nl/docs/HlpRestAPIResources.aspx
+  baseURL: https://start.exactonline.nl/api/v1
+  tags:
+  - Financial
+  properties:
+  - type: OpenAPI
+    url: openapi/exact-online-financial-api-openapi.yml
+- aid: exact-online:exact-online-logistics-api
+  name: Exact Online Logistics API
+  description: The Logistics API from Exact Online — 1 operation(s) for logistics.
+  humanURL: https://start.exactonline.nl/docs/HlpRestAPIResources.aspx
+  baseURL: https://start.exactonline.nl/api/v1
+  tags:
+  - Logistics
+  properties:
+  - type: OpenAPI
+    url: openapi/exact-online-logistics-api-openapi.yml
+- aid: exact-online:exact-online-purchase-api
+  name: Exact Online Purchase API
+  description: The Purchase API from Exact Online — 1 operation(s) for purchase.
+  humanURL: https://start.exactonline.nl/docs/HlpRestAPIResources.aspx
+  baseURL: https://start.exactonline.nl/api/v1
+  tags:
+  - Purchase
+  properties:
+  - type: OpenAPI
+    url: openapi/exact-online-purchase-api-openapi.yml
+- aid: exact-online:exact-online-sales-api
+  name: Exact Online Sales API
+  description: The Sales API from Exact Online — 3 operation(s) for sales.
+  humanURL: https://start.exactonline.nl/docs/HlpRestAPIResources.aspx
+  baseURL: https://start.exactonline.nl/api/v1
+  tags:
+  - Sales
+  properties:
+  - type: OpenAPI
+    url: openapi/exact-online-sales-api-openapi.yml
+- aid: exact-online:exact-online-system-api
+  name: Exact Online System API
+  description: The System API from Exact Online — 3 operation(s) for system.
+  humanURL: https://start.exactonline.nl/docs/HlpRestAPIResources.aspx
+  baseURL: https://start.exactonline.nl/api/v1
+  tags:
+  - System
+  properties:
+  - type: OpenAPI
+    url: openapi/exact-online-system-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/exact-online-agentic-access.yml
