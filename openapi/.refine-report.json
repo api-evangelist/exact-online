@@ -1,0 +1,24 @@
+{
+  "provider": "exact-online",
+  "sources": [
+    "exact-online-crm-api-openapi.yml",
+    "exact-online-financial-api-openapi.yml",
+    "exact-online-logistics-api-openapi.yml",
+    "exact-online-purchase-api-openapi.yml",
+    "exact-online-sales-api-openapi.yml",
+    "exact-online-system-api-openapi.yml"
+  ],
+  "outputs": [
+    "exact-online-crm-api-openapi.yml",
+    "exact-online-financial-api-openapi.yml",
+    "exact-online-logistics-api-openapi.yml",
+    "exact-online-purchase-api-openapi.yml",
+    "exact-online-sales-api-openapi.yml",
+    "exact-online-system-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
