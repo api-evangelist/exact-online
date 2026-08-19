@@ -1,0 +1,276 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Exact Online REST / OData CRM API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://start.exactonline.nl/api/oauth2/auth",
+      "accessTokenUrl": "https://start.exactonline.nl/api/oauth2/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "CRM",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List CRM accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://start.exactonline.nl/api/v1/:division/crm/Accounts",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "$select",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "$filter",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List CRM accounts"
+        },
+        {
+          "info": {
+            "name": "Create CRM account",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://start.exactonline.nl/api/v1/:division/crm/Accounts",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create CRM account"
+        },
+        {
+          "info": {
+            "name": "Get CRM account",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://start.exactonline.nl/api/v1/:division/crm/Accounts(:id)",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get CRM account"
+        },
+        {
+          "info": {
+            "name": "Update CRM account",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://start.exactonline.nl/api/v1/:division/crm/Accounts(:id)",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update CRM account"
+        },
+        {
+          "info": {
+            "name": "Delete CRM account",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://start.exactonline.nl/api/v1/:division/crm/Accounts(:id)",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete CRM account"
+        },
+        {
+          "info": {
+            "name": "List contacts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://start.exactonline.nl/api/v1/:division/crm/Contacts",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List contacts"
+        },
+        {
+          "info": {
+            "name": "Create contact",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://start.exactonline.nl/api/v1/:division/crm/Contacts",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create contact"
+        },
+        {
+          "info": {
+            "name": "Get contact",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://start.exactonline.nl/api/v1/:division/crm/Contacts(:id)",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get contact"
+        },
+        {
+          "info": {
+            "name": "Update contact",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://start.exactonline.nl/api/v1/:division/crm/Contacts(:id)",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update contact"
+        },
+        {
+          "info": {
+            "name": "Delete contact",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://start.exactonline.nl/api/v1/:division/crm/Contacts(:id)",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete contact"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

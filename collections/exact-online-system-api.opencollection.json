@@ -1,0 +1,77 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Exact Online REST / OData CRM System API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://start.exactonline.nl/api/oauth2/auth",
+      "accessTokenUrl": "https://start.exactonline.nl/api/oauth2/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "System",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get current user and division",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://start.exactonline.nl/api/v1/current/Me"
+          },
+          "docs": "Get current user and division"
+        },
+        {
+          "info": {
+            "name": "List divisions accessible to current user",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://start.exactonline.nl/api/v1/:division/system/Divisions",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List divisions accessible to current user"
+        },
+        {
+          "info": {
+            "name": "List all licensed divisions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://start.exactonline.nl/api/v1/:division/system/AllDivisions",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List all licensed divisions"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,70 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Exact Online REST / OData CRM Logistics API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://start.exactonline.nl/api/oauth2/auth",
+      "accessTokenUrl": "https://start.exactonline.nl/api/oauth2/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Logistics",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://start.exactonline.nl/api/v1/:division/logistics/Items",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List items"
+        },
+        {
+          "info": {
+            "name": "Create item",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://start.exactonline.nl/api/v1/:division/logistics/Items",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create item"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

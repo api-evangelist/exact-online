@@ -1,0 +1,183 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Exact Online REST / OData CRM Sales API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://start.exactonline.nl/api/oauth2/auth",
+      "accessTokenUrl": "https://start.exactonline.nl/api/oauth2/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Sales",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List sales invoices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://start.exactonline.nl/api/v1/:division/salesinvoice/SalesInvoices",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List sales invoices"
+        },
+        {
+          "info": {
+            "name": "Create sales invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://start.exactonline.nl/api/v1/:division/salesinvoice/SalesInvoices",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create sales invoice"
+        },
+        {
+          "info": {
+            "name": "Get sales invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://start.exactonline.nl/api/v1/:division/salesinvoice/SalesInvoices(:id)",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get sales invoice"
+        },
+        {
+          "info": {
+            "name": "Update sales invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://start.exactonline.nl/api/v1/:division/salesinvoice/SalesInvoices(:id)",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update sales invoice"
+        },
+        {
+          "info": {
+            "name": "Delete sales invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://start.exactonline.nl/api/v1/:division/salesinvoice/SalesInvoices(:id)",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete sales invoice"
+        },
+        {
+          "info": {
+            "name": "List sales orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://start.exactonline.nl/api/v1/:division/salesorder/SalesOrders",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List sales orders"
+        },
+        {
+          "info": {
+            "name": "Create sales order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://start.exactonline.nl/api/v1/:division/salesorder/SalesOrders",
+            "params": [
+              {
+                "name": "division",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create sales order"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
