@@ -2,23 +2,21 @@
   "repo": "exact-online",
   "feeds": [
     {
-      "source": "https://www.exact.com/nl/blog?format=feed&type=rss",
-      "feed_url": "https://www.exact.com/nl/blog?format=feed&type=rss",
-      "title": "",
-      "saved": 0,
-      "method": "feed",
-      "nature": "vendor-blog",
-      "nature_basis": "path_blog"
-    },
-    {
       "source": "https://apps.exactonline.com",
       "feed_url": "https://apps.exactonline.com",
       "title": "",
       "saved": 0,
       "method": "none"
+    },
+    {
+      "source": "https://www.exact.com/nl/blog?format=feed&type=rss",
+      "feed_url": "https://www.exact.com/nl/blog?format=feed&type=rss",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
     }
   ],
-  "fetched": "2026-08-30T22:33:40Z",
+  "fetched": "2026-09-06T19:17:18Z",
   "post_count": 12,
   "feed_nature": "vendor-blog",
   "feed_nature_basis": "path_blog",
