@@ -1,12 +1,7 @@
 {
   "provider": "exact-online",
   "sources": [
-    "exact-online-crm-api-openapi.yml",
-    "exact-online-financial-api-openapi.yml",
-    "exact-online-logistics-api-openapi.yml",
-    "exact-online-purchase-api-openapi.yml",
-    "exact-online-sales-api-openapi.yml",
-    "exact-online-system-api-openapi.yml"
+    "_original/exact-online-openapi.yml"
   ],
   "outputs": [
     "exact-online-crm-api-openapi.yml",
@@ -19,6 +14,23 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "exact-online-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "exact-online-openapi.yml: declared missing tag: CRM",
+    "exact-online-openapi.yml: declared missing tag: Financial",
+    "exact-online-openapi.yml: declared missing tag: Logistics",
+    "exact-online-openapi.yml: declared missing tag: Purchase",
+    "exact-online-openapi.yml: declared missing tag: Sales",
+    "exact-online-openapi.yml: declared missing tag: System",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "exact-online-crm-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "exact-online-financial-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "exact-online-logistics-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "exact-online-purchase-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "exact-online-sales-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "exact-online-system-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
