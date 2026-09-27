@@ -41,6 +41,14 @@ tags:
   - Business Software
   - CRM
   - Financial Software
+  - Small Business
+tags_raw:
+  - Accounting
+  - ERP
+  - Invoicing
+  - Business Software
+  - CRM
+  - Financial Software
   - SME
 url: >-
   https://raw.githubusercontent.com/api-evangelist/exact-online/refs/heads/main/apis.yml
@@ -58,6 +66,11 @@ apis:
   humanURL: https://start.exactonline.nl/docs/HlpRestAPIResources.aspx
   baseURL: https://start.exactonline.nl/api/v1
   tags:
+  - Accounting
+  - ERP
+  - Invoicing
+  - Finance
+  tags_raw:
   - Accounting
   - ERP
   - Invoicing
@@ -91,6 +104,8 @@ apis:
   humanURL: https://start.exactonline.nl/docs/HlpRestAPIResources.aspx
   baseURL: https://start.exactonline.nl/api/v1
   tags:
+  - Finance
+  tags_raw:
   - Financial
   properties:
   - type: OpenAPI

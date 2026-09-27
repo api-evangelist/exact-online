@@ -195,6 +195,23 @@ paths:
           description: Deleted
 components:
   schemas:
+    Contact:
+      type: object
+      properties:
+        ID:
+          type: string
+          format: uuid
+        Account:
+          type: string
+          format: uuid
+        FirstName:
+          type: string
+        LastName:
+          type: string
+        Email:
+          type: string
+        Phone:
+          type: string
     Account:
       type: object
       properties:
@@ -217,23 +234,6 @@ components:
           - C
           - S
           - R
-    Contact:
-      type: object
-      properties:
-        ID:
-          type: string
-          format: uuid
-        Account:
-          type: string
-          format: uuid
-        FirstName:
-          type: string
-        LastName:
-          type: string
-        Email:
-          type: string
-        Phone:
-          type: string
   securitySchemes:
     oauth2:
       type: oauth2
