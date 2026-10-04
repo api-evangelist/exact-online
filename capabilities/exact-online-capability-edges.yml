@@ -1,0 +1,43 @@
+slug: exact-online
+provider: Exact Online
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 3
+edges:
+- tag: Financial
+  spec_file: exact-online-financial-api-openapi.yml
+  capability_id: BC-200.10
+  capability_id_l1: BC-200
+  capability_name: General Ledger Management
+  confidence: 0.9
+  evidence: GET /{division}/financial/GLAccounts  listGLAccounts  List general-ledger accounts
+  reason: Operations create and list general-ledger accounts, i.e. chart-of-accounts maintenance, which
+    is squarely General Ledger Management.
+- tag: Purchase
+  spec_file: exact-online-purchase-api-openapi.yml
+  capability_id: BC-500.30
+  capability_id_l1: BC-500
+  capability_name: Purchase Order Management
+  confidence: 0.9
+  evidence: GET /{division}/purchaseorder/PurchaseOrders  listPurchaseOrders  List purchase orders; POST
+    ... createPurchaseOrder  Create purchase order
+  reason: Operations create and list purchase orders, the defining surface of Purchase Order Management.
+- tag: CRM
+  spec_file: exact-online-crm-api-openapi.yml
+  capability_id: BC-420.10
+  capability_id_l1: BC-420
+  capability_name: Customer Data Management
+  confidence: 0.85
+  evidence: 'GET /{division}/crm/Accounts  listAccounts  List CRM accounts ... POST /{division}/crm/Contacts  createContact  Create
+    contact; schemas: Contact, Account'
+  reason: Full CRUD over CRM accounts and contacts with Account and Contact schemas is customer master-data
+    maintenance, i.e. Customer Data Management within CRM.
