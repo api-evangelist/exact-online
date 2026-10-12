@@ -1,0 +1,803 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://zapier.com/apps/exact-online/integrations
+checked:
+- https://composio.dev/toolkits/exact-online
+- https://monid.ai/tools/exact-online
+- https://n8n.io/integrations/exact-online/
+- https://zapier.com/apps/exact-online/integrations
+summary: null
+marketplace_apps:
+- marketplace: zapier
+  channel: ipaas-listing
+  app: exact-online
+  url: https://zapier.com/apps/exact-online/integrations
+  external_url: https://www.exact.com/nl/app-store/zapier-debesis
+  partner_tier: SILVER
+  triggers:
+  - key: new_account
+    label: New or Updated Account
+  - key: new_bankaccount
+    label: New or Updated Bank Account
+  - key: new_bankentries
+    label: New or Updated Bank Entry
+  - key: new_cashentries
+    label: New or Updated Cash Entry
+  - key: new_contact
+    label: New or Updated Contact
+  - key: new_costtransaction
+    label: New or Updated Project Cost Transaction
+  - key: new_document
+    label: New or Updated Document
+  - key: new_generaljournalentries
+    label: New or Updated General Journal Entry
+  - key: new_goods_delivery
+    label: New or Updated Goods Delivery
+  - key: new_item
+    label: New or Updated Item
+  - key: new_mail_message_attachment
+    label: New Mail Message Attachment
+  - key: new_mail_message_sent
+    label: New Mail Message Sent
+  - key: new_opportunity
+    label: New or Updated Opportunity
+  - key: new_project
+    label: New or Updated Project
+  - key: new_projecttimetransaction
+    label: 'New or Updated Project Time Transaction  '
+  - key: new_purchaseentry
+    label: New or Updated Purchase Entry
+  - key: new_purchase_order
+    label: New or Updated Purchase Order
+  - key: new_quotation
+    label: New or Updated Quotation
+  - key: new_salesentry
+    label: New or Updated Sales Entry
+  - key: new_salesorder
+    label: New or Updated Sales Order
+  - key: new_sales_invoice
+    label: New or Updated Sales Invoice
+  - key: new_subscription
+    label: New or Updated Subscription
+  - key: new_updated_GLAccount
+    label: New or Updated General Ledger Account
+  - key: new_updated_stock_position
+    label: Updated Stock Position
+  actions:
+  - key: accept_quotation
+    label: Accept Quotation
+  - key: complete_sales_order
+    label: Complete Sales Order (Close Backorder)
+  - key: complete_sales_order_line
+    label: Complete Sales Order Line
+  - key: create_account
+    label: Create Account
+  - key: create_address
+    label: Create Address
+  - key: create_bankaccount
+    label: Create Bank Account
+  - key: create_bank_entry
+    label: Create Bank Entry
+  - key: create_bank_entry_xml
+    label: Create Bank Entry (XML)
+  - key: create_bill_of_material_material
+    label: Create Bill of Material (Bom) Material
+  - key: create_cashentry
+    label: Create Cash Entry
+  - key: create_communication_notes
+    label: Create Communication Note
+  - key: create_contact
+    label: Create Contact
+  - key: create_costcenter
+    label: Create Cost Center
+  - key: create_costunit
+    label: Create Cost Unit
+  - key: create_credit_note
+    label: Create Credit Note From Sales Invoice
+  - key: create_directdebitmandate
+    label: Create Direct Debit Mandate
+  - key: create_document
+    label: Create Document
+  - key: create_document_attachment
+    label: Create Document Attachment
+  - key: create_general_ledger_account
+    label: Create General Ledger Account
+  - key: create_gje
+    label: Create General Journal Entry
+  - key: create_goodsreceipt
+    label: Create Goods Receipt
+  - key: create_goods_delivery
+    label: Create Goods Delivery
+  - key: create_invoice_sales_order
+    label: Create Sales Invoice From Sales Order
+  - key: create_opportunity
+    label: Create Opportunity
+  - key: create_project
+    label: Create Project
+  - key: create_projectclassification
+    label: Create Project Classification
+  - key: create_projecttimetransaction
+    label: Create Project Time Transaction
+  - key: create_purchaseinvoice
+    label: Create Purchase Invoice
+  - key: create_purchase_entry
+    label: Create Purchase Entry
+  - key: create_purchase_entry_line
+    label: Create Purchase Entry Line
+  - key: create_purchase_order
+    label: Create Purchase Order
+  - key: create_quotation
+    label: Create Quotation
+  - key: create_salesinvoice
+    label: Create Sales Invoice
+  - key: create_salesinvoiceline
+    label: Create Sales Invoice Line
+  - key: create_sales_entry
+    label: Create Sales Entry
+  - key: create_sales_item_price
+    label: Create Sales Item Price
+  - key: create_sales_order
+    label: Create Sales Order
+  - key: create_sales_order_line
+    label: Create Sales Order Line
+  - key: create_shop_order
+    label: Create Shop Order
+  - key: create_stock_count
+    label: Create Stock Count (Draft)
+  - key: create_subscription
+    label: Create Subscription
+  - key: create_task
+    label: Create Task
+  - key: create_warehouse_transfer
+    label: Create Warehouse Transfer
+  - key: create_wbsactivity
+    label: Create WBS Activity
+  - key: delete_account
+    label: Delete Account
+  - key: delete_contact
+    label: Delete Contact
+  - key: delete_salesinvoice
+    label: Delete Sales Invoice
+  - key: delete_salesinvoiceline
+    label: Delete Sales Invoice Line
+  - key: delete_salesorder
+    label: Delete Sales Order
+  - key: delete_salesorderline
+    label: Delete Sales Order Line
+  - key: delete_subscription
+    label: Delete Subscription
+  - key: delete_subscriptionline
+    label: Delete Subscription Line
+  - key: delete_webhooks_subscription
+    label: Delete Webhook Subscription
+  - key: download_document
+    label: Download Document
+  - key: link_item_to_supplier
+    label: Link Item to Supplier
+  - key: match_transactions
+    label: Match Two Transactions (Reconcile)
+  - key: new_item
+    label: Create Item
+  - key: print_quotation
+    label: Print Quotation (Mark as Printed)
+  - key: process_payments
+    label: Process Payments (Generate Bank File)
+  - key: process_stock_count
+    label: Process Stock Count
+  - key: reject_quotation
+    label: Reject Quotation
+  - key: reopen_quotation
+    label: Reopen Quotation
+  - key: review_quotation
+    label: Review Quotation (Create Revision)
+  - key: send_salesorder
+    label: Send Sales Order
+  - key: send_sales_invoice
+    label: Send Sales Invoice
+  - key: update_account
+    label: Update Account
+  - key: update_address
+    label: Update Address
+  - key: update_bankaccount
+    label: Update Bank Account
+  - key: update_contact
+    label: Update Contact
+  - key: update_costcenter
+    label: Update Cost Center
+  - key: update_costunit
+    label: Update Cost Unit
+  - key: update_custom_fields
+    label: Update Custom Fields
+  - key: update_general_ledger_account
+    label: Update General Ledger Account
+  - key: update_goods_delivery
+    label: Update Goods Delivery (Track & Trace)
+  - key: update_item
+    label: Update Item
+  - key: update_opportunity
+    label: Update Opportunity
+  - key: update_payment
+    label: Update Payment
+  - key: update_project
+    label: Update Project
+  - key: update_purchase_entry
+    label: Update Purchase Entry
+  - key: update_purchase_invoice
+    label: Update Purchase Invoice
+  - key: update_purchase_order
+    label: Update Purchase Order
+  - key: update_purchase_order_line
+    label: Update Purchase Order Line
+  - key: update_quotation_line
+    label: Update Quotation Line
+  - key: update_salesinvoice
+    label: Update Sales Invoice
+  - key: update_salesorderline
+    label: Update Sales Order Line
+  - key: update_sales_entry
+    label: Update Sales Entry
+  - key: update_sales_entry_line
+    label: Update Sales Entry Line
+  - key: update_sales_order
+    label: Update Sales Order
+  - key: update_shop_order
+    label: Update Shop Order
+  - key: update_subscription
+    label: Update Subscription
+  - key: update_subscription_line
+    label: Update Subscription Line
+  searches:
+  - key: find_account
+    label: Find Account
+  - key: find_accountclassifications
+    label: Find Account Classifications
+  - key: find_accounts
+    label: Find Many Accounts
+  - key: find_account_manager
+    label: Find User
+  - key: find_address
+    label: Find Address
+  - key: find_addresses
+    label: Sync Addresses
+  - key: find_aging_overview
+    label: Find Aging Overview (Ageing Analysis)
+  - key: find_aging_payables
+    label: Find Aging Payables (Ageing Analysis)
+  - key: find_aging_receivables
+    label: Find Aging Receivables (Ageing Analysis)
+  - key: find_all_stock_positions
+    label: Find All Stock Positions
+  - key: find_asset
+    label: Find Asset(s)
+  - key: find_bankaccount
+    label: Find Bank Account
+  - key: find_bankentries
+    label: Find Bank Entry
+  - key: find_bank_entries
+    label: Find Bank Entries
+  - key: find_bank_entry_lines
+    label: Find Bank Entry Lines
+  - key: find_bank_transactions
+    label: Find Bank Transactions (Statement Mirror)
+  - key: find_budgets
+    label: Find Budgets (Per Period)
+  - key: find_contact
+    label: Find Contact
+  - key: find_costcenter
+    label: Find Cost Center
+  - key: find_costunit
+    label: Find Cost Unit
+  - key: find_deleted
+    label: Find Deleted Records (Sync)
+  - key: find_divisions
+    label: Find Division(s)
+  - key: find_document
+    label: Find Document
+  - key: find_exchange_rate
+    label: Find Exchange Rate(s)
+  - key: find_financial_periods
+    label: Find Financial Periods
+  - key: find_gje
+    label: Find General Journal Entry Lines
+  - key: find_glaccount
+    label: Find General Ledger Account(s)
+  - key: find_goods_delivery
+    label: Find Goods Delivery
+  - key: find_goods_delivery_line
+    label: Find Goods Receipt Line(s)
+  - key: find_goods_delivery_lines
+    label: Find Goods Delivery Line(s)
+  - key: find_goods_receipt
+    label: Find Goods Receipt(s)
+  - key: find_item
+    label: Find Item(s)
+  - key: find_item_group
+    label: Find Item Group(s)
+  - key: find_item_stock_per_location
+    label: Find Item Stock Per Location
+  - key: find_item_stock_per_warehouse
+    label: Find Item Stock Per Warehouse
+  - key: find_journal_status
+    label: Find Journal Status (Open/Closed Periods)
+  - key: find_mailmessagesent
+    label: Find Mail Message Sent
+  - key: find_many_contacts
+    label: Find Many Contacts
+  - key: find_many_items
+    label: Find Many Items
+  - key: find_many_quotations
+    label: Find Many Quotations
+  - key: find_many_salesinvoicelines
+    label: Find Many Sales Invoice Lines
+  - key: find_many_salesinvoices
+    label: Find Many Sales Invoices
+  - key: find_opportunity
+    label: Find Opportunity
+  - key: find_outstanding_invoices_overview
+    label: Find Outstanding Invoices Overview
+  - key: find_payables_list
+    label: Find Payables (Outstanding Items)
+  - key: find_payment
+    label: Find Payment
+  - key: find_profit_loss_overview
+    label: Find Profit Loss Overview
+  - key: find_project
+    label: Find Project
+  - key: find_projecttimetransaction
+    label: Find Project Time Transaction
+  - key: find_project_classification
+    label: Find Project Classification
+  - key: find_purchaseentry
+    label: Find Purchase Entry
+  - key: find_purchaseinvoice
+    label: Find Purchase Invoice
+  - key: find_purchase_entry_line
+    label: Find Purchase Entry Line(s)
+  - key: find_purchase_order
+    label: Find Purchase Order(s)
+  - key: find_purchase_order_lines
+    label: Find Purchase Order Line(s)
+  - key: find_purchase_order_reconciliation
+    label: Find Purchase Order Reconciliation
+  - key: find_quotation
+    label: Find Quotation
+  - key: find_quotation_line
+    label: Find Quotation Line(s)
+  - key: find_receivable
+    label: Find Receivable(s)
+  - key: find_receivables_list
+    label: Find Receivables (Outstanding Items)
+  - key: find_reporting_balance
+    label: Find Reporting Balance (Trial Balance)
+  - key: find_revenue_list
+    label: Find Revenue Per Period
+  - key: find_salesentry
+    label: Find Sales Entry
+  - key: find_salesorderline
+    label: Find Sales Order Line(s)
+  - key: find_salespricelist
+    label: Find Sales Price List
+  - key: find_sales_invoice
+    label: Find Sales Invoice(s)
+  - key: find_sales_item_price
+    label: Find Sales Item Price(s)
+  - key: find_sales_order
+    label: Find Sales Order(s)
+  - key: find_sales_price_list_linked_account
+    label: Find Accounts Linked to Sales Price Lists
+  - key: find_sales_price_list_volume_discount
+    label: Find Sales Price List Volume Discounts
+  - key: find_stock_count
+    label: Find Stock Count(s)
+  - key: find_stock_position
+    label: Find Stock Position(s)
+  - key: find_subscription
+    label: Find Subscription
+  - key: find_tax_returns
+    label: Find Tax Returns (VAT / EC Sales List)
+  - key: find_transaction_lines
+    label: Find Transaction Line(s)
+  - key: find_vat_code
+    label: Find VAT Code(s)
+  - key: find_warehouse
+    label: Find Warehouse(s)
+  - key: find_warehouse_transfer
+    label: Find Warehouse Transfer
+  - key: get_gl_totals_for_period
+    label: Get General Ledger Totals for Period
+  - key: sync_paymentterms
+    label: Sync Payment Terms
+edges:
+- partner_name: Pipedrive
+  partner: pipedrive
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/pipedrive
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://pipedrive.com/
+- partner_name: Shopify
+  partner: shopify
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/shopify
+  direction: third-party
+  category: eCommerce
+  partner_url: https://www.shopify.com/
+- partner_name: Google Sheets
+  partner: google-sheets
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/google-sheets
+  direction: third-party
+  category: Google
+  partner_url: http://sheets.google.com/
+- partner_name: monday.com
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/monday
+  direction: third-party
+  category: Project Management
+  partner_url: https://monday.com/
+- partner_name: PandaDoc
+  partner: pandadoc
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/pandadoc
+  direction: third-party
+  category: Documents
+  partner_url: https://www.pandadoc.com/integrations/zapier/?utm_source=zapier-marketplace&utm_medium=partner&utm_campaign=2020-11-inbd-marketplace-websitevisit-pandadoc-zapier-integration
+- partner_name: Harvest
+  partner: harvest
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/harvest
+  direction: third-party
+  category: Time Tracking Software
+  partner_url: https://getharvest.com/
+- partner_name: Stripe
+  partner: stripe
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/stripe
+  direction: third-party
+  category: Payment Processing
+  partner_url: https://stripe.com/
+- partner_name: Mailchimp
+  partner: mailchimp
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/mailchimp
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://mailchimp.com/
+- partner_name: Trello
+  partner: trello
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/trello
+  direction: third-party
+  category: Project Management
+  partner_url: https://trello.com/
+- partner_name: Gravity Forms
+  partner: gravity-forms
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/gravity-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://www.gravityforms.com/?utm_campaign=partners&utm_source=zapier-listing-learn-more&utm_medium=free-placement
+- partner_name: vPlan
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/vplan
+  direction: third-party
+  category: Task Management
+  partner_url: https://www.vplan.nl/
+- partner_name: Airtable
+  partner: airtable
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/airtable
+  direction: third-party
+  category: Databases
+  partner_url: https://airtable.com/
+- partner_name: Gripp
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/gripp
+  direction: third-party
+  category: Project Management
+  partner_url: https://gripp.com/
+- partner_name: Turis
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/turis
+  direction: third-party
+  category: eCommerce
+  partner_url: https://turis.app/
+- partner_name: Salesforce
+  partner: salesforce
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/salesforce
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://www.salesforce.com/
+- partner_name: Asana
+  partner: asana
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/asana
+  direction: third-party
+  category: Project Management
+  partner_url: http://asana.com/
+- partner_name: ActiveCampaign
+  partner: activecampaign
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/activecampaign
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://www.activecampaign.com/?utm_source=unpaid_syndication_website&utm_medium=referral&utm_campaign=zapier_listing
+- partner_name: Microsoft Excel
+  partner: null
+  partner_match: null
+  partner_candidate: zapier
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/excel
+  direction: third-party
+  category: Microsoft
+  partner_url: https://zapier.com/office.com
+- partner_name: Booqable
+  partner: booqable
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/booqable
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://booqable.com/
+- partner_name: Storeganise
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/storeganise
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://storeganise.com/
+- partner_name: HubSpot
+  partner: hubspot
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/hubspot
+  direction: third-party
+  category: Marketing Automation
+  partner_url: http://www.hubspot.com/
+- partner_name: WooCommerce
+  partner: woocommerce
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/woocommerce
+  direction: third-party
+  category: eCommerce
+  partner_url: https://woocommerce.com/products/woocommerce-zapier/?utm_source=zapier&utm_medium=website&utm_campaign=integration
+- partner_name: Connecteam
+  partner: connecteam
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/connecteam
+  direction: third-party
+  category: Scheduling & Booking
+  partner_url: https://connecteam.com/?utm_source=zapier&utm_medium=partnerships&utm_content=marketplace
+- partner_name: Anthropic (Claude)
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/anthropic-claude
+  direction: third-party
+  category: AI Models
+  partner_url: https://www.anthropic.com/
+- partner_name: Zoho Books
+  partner: zoho-books
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/zoho-books
+  direction: third-party
+  category: Accounting
+  partner_url: https://go.zoho.com/3Al
+- partner_name: Qonto
+  partner: qonto
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/qonto
+  direction: third-party
+  category: Payment Processing
+  partner_url: https://qonto.eu/en
+- partner_name: Recruiterflow
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/recruiterflow
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://recruiterflow.com/
+- partner_name: Clinicminds
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/clinicminds
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://www.clinicminds.com/
+- partner_name: Slack
+  partner: slack
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/slack
+  direction: third-party
+  category: Team Chat
+  partner_url: https://slack.com/
+- partner_name: ClickUp
+  partner: clickup
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/exact-online/integrations/clickup
+  direction: third-party
+  category: Project Management
+  partner_url: https://clickup.com/zapier
+templates:
+- title: Create new Exact Online accounts when new customers are added in Stripe
+  url: https://zapier.com/apps/exact-online/integrations/stripe/255583186/create-new-exact-online-accounts-when-new-customers-are-added-in-stripe
+  apps:
+  - stripe
+  - exact-online
+- title: Find and mark Yoobi invoices as paid for new bank transactions in Exact Online
+  url: https://zapier.com/apps/exact-online/integrations/yoobi-software/1134220/find-and-mark-yoobi-invoices-as-paid-for-new-bank-transactions-in-exact-online
+  apps:
+  - exact-online
+  - yoobi-software
+- title: Add new projects in Yoobi CRM to Exact Online
+  url: https://zapier.com/apps/exact-online/integrations/yoobi-software/1134223/add-new-projects-in-yoobi-crm-to-exact-online
+  apps:
+  - yoobi-software
+  - exact-online
+- title: Create items in Exact Online when new products in WooCommerce are added
+  url: https://zapier.com/apps/exact-online/integrations/woocommerce/1686074/create-items-in-exact-online-when-new-products-in-woocommerce-are-added
+  apps:
+  - woocommerce
+  - exact-online
+- title: Create or update Klaviyo profiles when new or updated accounts happen in Exact Online
+  url: https://zapier.com/apps/exact-online/integrations/klaviyo/1702080/create-or-update-klaviyo-profiles-when-new-or-updated-accounts-happen-in-exact-online
+  apps:
+  - exact-online
+  - klaviyo
+- title: Create or update Klaviyo profiles for new or updated contacts in Exact Online
+  url: https://zapier.com/apps/exact-online/integrations/klaviyo/1704749/create-or-update-klaviyo-profiles-for-new-or-updated-contacts-in-exact-online
+  apps:
+  - exact-online
+  - klaviyo
+- title: Generate purchase entries in Exact Online for every new form entry in WPForms
+  url: https://zapier.com/apps/exact-online/integrations/wpforms/1720074/generate-purchase-entries-in-exact-online-for-every-new-form-entry-in-wpforms
+  apps:
+  - wpforms
+  - exact-online
+- title: Track new or updated bank accounts in Exact Online and create worksheets in Google Sheets
+  url: https://zapier.com/apps/exact-online/integrations/google-sheets/1724951/track-new-or-updated-bank-accounts-in-exact-online-and-create-worksheets-in-google-sheets
+  apps:
+  - exact-online
+  - google-sheets
+- title: Create new Chargebee customers from new or updated Exact Online contacts
+  url: https://zapier.com/apps/chargebee/integrations/exact-online/1728989/create-new-chargebee-customers-from-new-or-updated-exact-online-contacts
+  apps:
+  - exact-online
+  - chargebee
+- title: Create new Exact Online accounts from new Jotform submissions
+  url: https://zapier.com/apps/exact-online/integrations/jotform/1739262/create-new-exact-online-accounts-from-new-jotform-submissions
+  apps:
+  - jotform
+  - exact-online
+- title: Create new Exact Online accounts for every new client in SimplyBook.me
+  url: https://zapier.com/apps/exact-online/integrations/simplybook/1768154/create-new-exact-online-accounts-for-every-new-client-in-simplybookme
+  apps:
+  - simplybook
+  - exact-online
+- title: Manage new or updated quotations in Exact Online by creating records in Zapier Tables
+  url: https://zapier.com/apps/exact-online/integrations/zapier-tables/255569412/manage-new-or-updated-quotations-in-exact-online-by-creating-records-in-zapier-tables
+  apps:
+  - exact-online
+  - zapier-tables
+template_total: 41
