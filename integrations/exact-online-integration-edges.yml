@@ -3,6 +3,7 @@ method: searched
 source:
 - https://zapier.com/apps/exact-online/integrations
 checked:
+- https://azuremarketplace.microsoft.com/
 - https://composio.dev/toolkits/exact-online
 - https://monid.ai/tools/exact-online
 - https://n8n.io/integrations/exact-online/
@@ -739,6 +740,22 @@ edges:
   direction: third-party
   category: Project Management
   partner_url: https://clickup.com/zapier
+- partner_name: Microsoft Azure Marketplace
+  partner: microsoft-azure
+  partner_match: aggregator
+  type: marketplace
+  marketplace: azure-marketplace
+  channel: distribution
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=Exact
+  listing_count: 2
+  apps:
+  - Exact Synergy
+  - ELIS
+  seller_name: Exact
+  detected_by: sweep-cloud-marketplaces.py
+  detected: '2026-10-13'
 templates:
 - title: Create new Exact Online accounts when new customers are added in Stripe
   url: https://zapier.com/apps/exact-online/integrations/stripe/255583186/create-new-exact-online-accounts-when-new-customers-are-added-in-stripe
