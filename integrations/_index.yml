@@ -397,5 +397,5 @@
     builder: unknown (not in the directory record)
     other_apps:
     - exact-bouw7
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
