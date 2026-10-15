@@ -1,19 +1,45 @@
-generated: '2026-07-11'
-method: derived
-source: openapi/exact-online-openapi.yml
-docs: https://support.exactonline.com/community/s/article/All-All-DNO-Content-oauth-eol-oauth-devstep2?language=en_GB
-note: >-
-  Exact Online's OAuth 2.0 authorization code flow does not use a scope
-  parameter (documented request parameters are client_id, redirect_uri,
-  response_type, and force_login); access levels are instead configured per
-  resource (None/Read/Manage) in the Exact App Center Data & Security Review
-  and consented per division by the user
-  (https://support.exactonline.com/community/s/article/All-All-DNO-Content-oauth-eol-oauth-devstep2?language=en_GB).
+generated: '2026-10-14'
+method: none
+source: openapi/exact-online-crm-api-openapi.yml, openapi/exact-online-financial-api-openapi.yml,
+  openapi/exact-online-logistics-api-openapi.yml, openapi/exact-online-purchase-api-openapi.yml,
+  openapi/exact-online-sales-api-openapi.yml, openapi/exact-online-system-api-openapi.yml
 schemes:
 - name: oauth2
-  source: openapi/exact-online-openapi.yml
+  source: openapi/exact-online-crm-api-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://start.exactonline.nl/api/oauth2/auth
+    tokenUrl: https://start.exactonline.nl/api/oauth2/token
+- name: oauth2
+  source: openapi/exact-online-financial-api-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://start.exactonline.nl/api/oauth2/auth
+    tokenUrl: https://start.exactonline.nl/api/oauth2/token
+- name: oauth2
+  source: openapi/exact-online-logistics-api-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://start.exactonline.nl/api/oauth2/auth
+    tokenUrl: https://start.exactonline.nl/api/oauth2/token
+- name: oauth2
+  source: openapi/exact-online-purchase-api-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://start.exactonline.nl/api/oauth2/auth
+    tokenUrl: https://start.exactonline.nl/api/oauth2/token
+- name: oauth2
+  source: openapi/exact-online-sales-api-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://start.exactonline.nl/api/oauth2/auth
+    tokenUrl: https://start.exactonline.nl/api/oauth2/token
+- name: oauth2
+  source: openapi/exact-online-system-api-openapi.yml
   flows:
   - flow: authorizationCode
     authorizationUrl: https://start.exactonline.nl/api/oauth2/auth
     tokenUrl: https://start.exactonline.nl/api/oauth2/token
 scopes: []
+note: The OAuth2 security scheme(s) in the OpenAPI declare no scopes, and no security requirement
+  references one.
