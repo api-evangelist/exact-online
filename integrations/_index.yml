@@ -423,7 +423,7 @@
     - connectors/applications/exact-online
     vendor_link: https://www.exact.com/us/software/exact-online
     builder: Fivetran
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: exact-online-meltano
   label: Meltano
@@ -452,7 +452,7 @@
     quality:
     - unknown
     builder: 'community (Meltano Hub variant maintainers: ticketswap)'
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
 - slug: exact-online-microsoft-teams-own
   label: Microsoft Teams (own)
