@@ -12,6 +12,7 @@ checked:
 - https://n8n.io/integrations/exact-online/
 - https://zapier.com/api/v4/apps/
 - https://zapier.com/apps/exact-online/integrations
+- microsoft-teams/integrations/microsoft-teams-integration-edges.yml
 summary: null
 marketplace_apps:
 - marketplace: zapier
@@ -842,6 +843,25 @@ edges:
     builder: 'community (Meltano Hub variant maintainers: ticketswap)'
   detected_by: sweep-data-integration.py
   first_seen: '2026-10-18'
+- partner_name: Microsoft Teams (own)
+  partner: microsoft-teams
+  partner_match: mirror
+  mirror_match: domain+product
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://appsource.microsoft.com/en-us/product/office/WA200005149
+  mirror_of: microsoft-teams/integrations/microsoft-teams-integration-edges.yml
+  apps:
+  - Exact Online Premium
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Microsoft Teams app
+  publisher_verified:
+  - Microsoft 365 Certified
 templates:
 - title: Create new Exact Online accounts when new customers are added in Stripe
   url: https://zapier.com/apps/exact-online/integrations/stripe/255583186/create-new-exact-online-accounts-when-new-customers-are-added-in-stripe
