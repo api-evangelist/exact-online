@@ -1,4 +1,4 @@
-# Exact Online (exact-online)
+# Exact Online
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,65 +66,117 @@
 
 Exact Online is a Dutch cloud business software suite from Exact (Delft, NL) serving SMEs and accountants with accounting, ERP, invoicing, CRM, project management, and AI-driven automation, used by more than 675,000 companies. The platform exposes a comprehensive REST and OData API covering financial, HRM, logistics, CRM, and project data across regional deployments (start.exactonline.nl, .co.uk, .be, .de, .fr, .es, .com). Authentication is via OAuth 2.0 with regional authorization and token endpoints.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/exact-online/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/exact-online/refs/heads/main/apis.yml)
+**Areas:** Accounting · ERP · Invoicing · Business Software · CRM · Financial Software · Small Business
 
-## Scope
+## Exact Online on APIs.io
 
-- **Type:** Index
+Everything profiled for Exact Online is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/exact-online/](https://apis.io/providers/exact-online/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (7)
 
-- Accounting
-- ERP
-- Invoicing
-- Business Software
-- CRM
-- Financial Software
-- SME
+- [Exact Online REST / OData API](https://apis.io/apis/exact-online/rest-api/) — REST and OData API (v1) for Exact Online covering financials, sales, purchasing, inventory, HRM, CRM, project management, and master data. Authentication is…
+- [Exact Online CRM API](https://apis.io/apis/exact-online/exact-online-crm-api/) — The CRM API from Exact Online — 4 operation(s) for crm.
+- [Exact Online Financial API](https://apis.io/apis/exact-online/exact-online-financial-api/) — The Financial API from Exact Online — 1 operation(s) for financial.
+- [Exact Online Logistics API](https://apis.io/apis/exact-online/exact-online-logistics-api/) — The Logistics API from Exact Online — 1 operation(s) for logistics.
+- [Exact Online Purchase API](https://apis.io/apis/exact-online/exact-online-purchase-api/) — The Purchase API from Exact Online — 1 operation(s) for purchase.
+- [Exact Online Sales API](https://apis.io/apis/exact-online/exact-online-sales-api/) — The Sales API from Exact Online — 3 operation(s) for sales.
+- [Exact Online System API](https://apis.io/apis/exact-online/exact-online-system-api/) — The System API from Exact Online — 3 operation(s) for system.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-11
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Exact Online REST / OData API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-REST and OData API (v1) for Exact Online covering financials, sales, purchasing, inventory, HRM, CRM, project management, and master data. Authentication is OAuth 2.0; applications register in the Exact App Center and use regional auth/token endpoints (e.g. start.exactonline.nl for the Netherlands, start.exactonline.co.uk for the UK).
+- [Exact Online Agentic Access](https://apis.io/agentic-access/exact-online/exact-online-agentic-access/)
 
-- **Human URL:** [https://start.exactonline.nl/docs/HlpRestAPIResources.aspx](https://start.exactonline.nl/docs/HlpRestAPIResources.aspx)
-- **Base URL:** `https://start.exactonline.nl/api/v1`
+#### Collections (7)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Accounting
-- ERP
-- Invoicing
-- Financial
+- [Exact Online REST / OData API](https://apis.io/collections/exact-online/open-exact-online/)
+- [Exact Online REST / OData CRM API](https://apis.io/collections/exact-online/open-exact-online-crm-api/)
+- [Exact Online REST / OData CRM Financial API](https://apis.io/collections/exact-online/open-exact-online-financial-api/)
+- [Exact Online REST / OData CRM Logistics API](https://apis.io/collections/exact-online/open-exact-online-logistics-api/)
+- [Exact Online REST / OData CRM Purchase API](https://apis.io/collections/exact-online/open-exact-online-purchase-api/)
+- [Exact Online REST / OData CRM Sales API](https://apis.io/collections/exact-online/open-exact-online-sales-api/)
+- [Exact Online REST / OData CRM System API](https://apis.io/collections/exact-online/open-exact-online-system-api/)
 
-#### Properties
+#### Security (4)
 
-- [Documentation](https://start.exactonline.nl/docs/HlpRestAPIResources.aspx)
-- [Reference](https://support.exactonline.com/community/s/article/All-All-DNO-Content-restrefdocs)
-- [Introduction](https://support.exactonline.com/community/s/article/All-All-DNO-Content-restintro)
-- [O Auth  Authorization  Endpoint](https://start.exactonline.nl/api/oauth2/auth)
-- [O Auth  Token  Endpoint](https://start.exactonline.nl/api/oauth2/token)
-- [Sample  Code](https://support.exactonline.com/community/s/article/All-All-DNO-Content-restsamplecode)
-- [Postman Collection](collections/exact-online.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/exact-online.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Exact Online Authentication](https://apis.io/security/exact-online/exact-online-authentication/)
+- [Exact Online Domain Security](https://apis.io/security/exact-online/exact-online-domain-security/)
+- [Exact Online Trust Center](https://apis.io/security/exact-online/exact-online-trust-center/)
+- [Exact Online Vulnerability Disclosure](https://apis.io/security/exact-online/exact-online-vulnerability-disclosure/)
 
-- [LinkedIn](https://www.linkedin.com/company/exact)
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Exact Online Scopes](https://apis.io/scopes/exact-online/exact-online-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.exact.com)
 - [Documentation](https://support.exactonline.com/community/s/knowledge-base)
-- [A P I  Documentation](https://start.exactonline.nl/docs/HlpRestAPIResources.aspx)
 - [Pricing](https://www.exact.com/nl/software/prijs)
-- [Sign Up](https://www.exact.com/nl/probeer-gratis)
-- [App  Center](https://apps.exactonline.com)
+- [Blog](https://www.exact.com/nl/blog?format=feed&type=rss)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 29.6** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 42.9 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 31.0 |
+| Access clarity | 21.1 |
+
+**Agent readiness 22.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 32.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/exact-online/](https://apis.io/providers/exact-online/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Exact Online: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/exact-online/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
